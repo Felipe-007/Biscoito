@@ -34,5 +34,12 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     color: '#dd7b22',
     fontWeight: 'bold'
-  }
+  },
+  quebrar:{
+    borderColor: '#121212',
+    margin: 15,
+  },
+  textoquebrar: {
+    color: '#121212'
+  },
 })

@@ -12,6 +12,7 @@ class App extends Component {
     }
 
     this.quebraBiscoito = this.quebraBiscoito.bind(this)
+    this.reiniciar = this.reiniciar.bind(this)
 
     this.frases = [
       'Siga os bons e aprenda com eles.',
@@ -33,6 +34,14 @@ class App extends Component {
     })
   }
 
+  reiniciar(){
+    this.setState({
+      textoFrase: '',
+      img: require('./src/biscoito.png'),
+    })
+  }
+  
+
   render() {
     return (
       <View style={styles.container}>
@@ -46,6 +55,12 @@ class App extends Component {
         <TouchableOpacity style={styles.botao} onPress={ this.quebraBiscoito }>
           <View style={styles.btnArea}>
             <Text style={styles.btnTexto}>Quebrar biscoito</Text>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={[styles.botao, styles.quebrar]} onPress={ this.reiniciar }>
+          <View style={styles.btnArea}>
+            <Text style={[styles.btnTexto, styles.textoquebrar]}>Reiniciar Biscoito</Text>
           </View>
         </TouchableOpacity>
       </View>
